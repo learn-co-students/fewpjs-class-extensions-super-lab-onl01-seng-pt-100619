@@ -1,1 +1,43 @@
 // Write your classes here
+// - A `Tree` instance should take in one parameter when created, `species`,
+// and assign this to a property named `species`.
+// - A `Tree` should have a static method, `definition()`, that returns a short
+// definition of all trees.
+
+// > A tree is a perennial plant with an elongated stem, or trunk, supporting
+// > branches and leaves.
+class Tree {
+    constructor(species) {
+        this.species = species
+    }
+
+    static definition() {
+        return "A tree is a perennial plant with an elongated stem, or trunk, supporting branches and leaves."
+    }
+}
+
+class Deciduous extends Tree {
+    constructor(species, name) {
+        super(species);
+        this.name = name;
+    }
+
+    static definition() {
+        return (
+            super.definition() + " Deciduous trees shed their leaves annually."
+        )
+    }
+}
+
+class Evergreen extends Tree {
+    constructor(species, name) {
+        super(species);
+        this.name = name;
+    }
+
+    static definition() {
+        return (
+            super.definition() + " Evergreens keep their leaves all year round."
+        )
+    }
+}
